@@ -5,7 +5,6 @@ import os
 import platform
 import shutil
 import sys
-from distutils.spawn import find_executable
 
 from subprocess import call, STDOUT
 try:
@@ -83,7 +82,7 @@ def create_or_recreate_dir(dir_path):
 
 
 def check_if_executable_exists_in_path(executable):
-    path_to_cmd = find_executable(executable)
+    path_to_cmd = shutil.which(executable)
     return path_to_cmd is not None
 
 
