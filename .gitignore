@@ -8,3 +8,4 @@
 .env/
 .mergeapks/
 /mergeapks.sign.properties
+/buildarea/**
